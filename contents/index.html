@@ -1,0 +1,134 @@
+<style>
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+  .b-example-divider {
+    width: 100%;
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  }
+
+  body {
+    position: relative;
+    font-family: Arial, sans-serif;
+  }
+
+  body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/images/image_22.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1; /* Smanjite vrednost za bledji efekat */
+    z-index: -3; /* Postavite sloj iza sadrzaja */
+  }
+
+  .content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .lead {
+    margin-top: 60px;
+  }
+
+  .custom-heading {
+        text-align: center;
+        margin-top: 20px;
+        font-family: 'Georgia', serif;
+        font-size: 2rem; 
+        color: rgb(129, 120, 108);
+      }
+  </style>
+</head>
+
+<body>
+  <main>
+
+    <div class="container marketing">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading fw-normal lh-1 custom-heading">Welcome to Majstorski kutak <span class="text-body-secondary"></span></h2>
+          <p class="lead">We bring the timeless art of carpentry to life with skill, passion, and precision. Whether you’re looking to transform your living space, add unique decor, or invest in custom furniture, you’ve come to the right place.</p>
+          <hr class="featurette-divider">
+          <p class="lead">Our team of master craftsmen is dedicated to creating pieces that are as beautiful as they are functional. We take pride in our work and are committed to delivering exceptional quality and service to every client.</p>
+        </div>
+        <div class="col-md-5">
+          <img src="../assets/images/image_22.png" class="img-fluid" alt="Majstorski kutak">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row">
+        <div class="col-lg-4">
+          <img src="../assets/images/image_28.jpg" class="img-fluid rounded-circle" alt="Majstorski kutak" width="140" height="140">
+          <h2 class="fw-normal">Services</h2>
+          <p>Our team provides personalized consultations to ensure your needs are met with expertise and care.</p>
+          <p><a href="service.html" class="btn btn-secondary">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img src="../assets/images/image_36.jpg" class="img-fluid rounded-circle" alt="Majstorski kutak" width="155" height="155"> 
+          <h2 class="fw-normal">Production</h2>
+          <p>Meticulous attention to detail defines our production process, resulting in pieces that stand the test of
+            time.</p>
+          <p><a href="gallery.html" class="btn btn-secondary">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img src="../assets/images/image_34.png" class="img-fluid rounded-circle" alt="Majstorski kutak" width="158" height="158">
+          <h2 class="fw-normal">Decors</h2>
+          <p>From intricately carved accents to minimalist modern designs, we create decor that inspires.</p>
+          <p><a href="decor.html" class="btn btn-secondary">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading fw-normal lh-1">Design <span class="text-body-secondary"></span></h2>
+          <p class="lead">Every project begins with a thoughtful design, ensuring a seamless blend of aesthetics and
+            practicality.</p>
+          <p class = "lead">Our custom designs harmonize form and function, turning your ideas into exquisite realities.</p>
+        </div>
+        <div class="col-md-5 order-md-1">
+          <img src="../assets/images/image_25.jpg" class="img-fluid" alt="Majstorski kutak">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading fw-normal lh-1">Products <span class="text-body-secondary"></span></h2>
+          <p class="lead">Looking for something truly unique? We specialize in creating one-of-a-kind furniture and
+            decor tailored to your needs.</p>
+          <p class="lead">Each product is a testament to quality and craftsmanship, made to elevate your interiors and lifestyle.</p>
+        </div>
+        <div class="col-md-5">
+          <img src="../assets/images/image_24.jpeg" class="img-fluid" alt="Majstorski kutak">
+        </div>
+      </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="container">
+      <p class="float-end"><a href="#">Back to top</a></p>
+    </footer>
+  </main>
+  <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
