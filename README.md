@@ -2,12 +2,16 @@
 
 ## About the Project
 
-**Majstorski Kutak** is a website dedicated to showcasing our premium custom furniture services. With a tradition spanning over 15 years, our goal is to bring beauty and functionality into your home through handcrafted wooden products.
+**Majstorski Kutak** is a website dedicated to showcasing our premium custom furniture services. With a tradition
+spanning over 15 years, our goal is to bring beauty and functionality into your home through handcrafted wooden
+products.
 
 ## Our Mission
 
-- **Traditional and Innovative**: We combine tradition and innovation to create unique products that reflect your vision and style.
-- **Precision and Passion**: Our passion for craftsmanship and precision in production ensures the highest quality of every product.
+- **Traditional and Innovative**: We combine tradition and innovation to create unique products that reflect your vision
+  and style.
+- **Precision and Passion**: Our passion for craftsmanship and precision in production ensures the highest quality of
+  every product.
 
 ## Services
 

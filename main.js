@@ -7,7 +7,11 @@ setLocalStorage = (key, value) => {
 }
 
 getLocalStorage = (key) => {
-    return localStorage.getItem(key);
+    try {
+        return JSON.parse(localStorage.getItem(key));
+    } catch (e) {
+        return ""
+    }
 }
 
 changeLanguage = (language) => {
@@ -16,12 +20,26 @@ changeLanguage = (language) => {
 }
 
 getLanguage = () => {
-    var language = getLocalStorage("language");
+    let language = getLocalStorage("language");
     if (language) {
         document.getElementById("language").value = language;
     } else {
         document.getElementById("language").value = "en";
+        language = "en";
         setLocalStorage("language", "en");
+    }
+}
+
+const defaultLanguage = "en";
+
+loadLanguage = () => {
+    let language = getLocalStorage("language");
+    if (language) {
+        setActiveLanguage(language);
+    } else {
+        language = defaultLanguage;
+        setLocalStorage("language", defaultLanguage);
+        setActiveLanguage(defaultLanguage);
     }
 }
 
@@ -58,3 +76,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const language = getLocalStorage("language") || "en";
     setActiveLanguage(language);
 });
+
+// set on load for body to get language
+document.body.onload = loadLanguage;
