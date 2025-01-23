@@ -25,7 +25,7 @@
         checkCookie = () => {
             let user = readCookie("username");
             if (user != null) {
-                alert("Welcome again " + user);
+                // alert("Welcome again " + user);
             } else {
                 if (confirm("Do you want to save your data?")) {
                     user = prompt("Please enter your name:", "");
@@ -68,7 +68,8 @@
     </script>
 </head>
 
-<body onload="messageAboutUs()">
+<!-- <body onload="messageAboutUs()"> -->
+<body">
     <div id="head-content"></div>
     <div id="nav-content"></div>
     <div id="content-content"></div>

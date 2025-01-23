@@ -28,7 +28,7 @@
         height: 32px;
     }
 
-    .address-container {
+    /* .address-container {
         position: fixed;
         bottom: 0;
         left: 0;
@@ -36,62 +36,62 @@
         padding: 0px;
         border-radius: 0 8px 0 0;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
+    } */
 
     .contact-form {
-            position:relative;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 10px;
-            border-radius: 8px 8px 0 0;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 90%;
-            max-width: 400px;
-            max-height: fit-content;
-            height: auto;
-            margin-bottom: 20px;
-        }
+        position: relative;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 10px;
+        border-radius: 8px 8px 0 0;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 90%;
+        max-width: 400px;
+        max-height: fit-content;
+        height: auto;
+        /* margin-bottom: 20px; */
+    }
 
     .contact-form input,
     .contact-form textarea {
-            width: 100%;
-            padding: 0px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-    
-        .contact-form button {
-            width: 100%;
-            padding: 10px;
-            background-color: #333;
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
+        width: 100%;
+        padding: 0px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .contact-form button {
+        width: 100%;
+        padding: 10px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
 
     .contact-form button:hover {
-            background-color: #555;
-        }
+        background-color: #555;
+    }
 
-    @media (min-width: 768px) {
+    /* @media (min-width: 768px) {
         .address-container {
             width: 12%;
             margin-right: 0;
         }
-    }
+    } */
 
     @media (max-width: 768px) {
-            .contact-form {
-                width: 100%;
-                left: 0;
-                transform: none;
-                border-radius: 0;
-            }
+        .contact-form {
+            width: 100%;
+            left: 0;
+            transform: none;
+            border-radius: 0;
         }
+    }
 
     .bd-placeholder-img {
         font-size: 1.125rem;
@@ -106,6 +106,7 @@
             font-size: 3.5rem;
         }
     }
+
     .b-example-divider {
         width: 100%;
         height: 3rem;
@@ -141,30 +142,32 @@
     }
 
     .lead {
-    margin-top: 40px;
-  }
+        margin-top: 40px;
+    }
 
-  .custom-heading {
+    .custom-heading {
         text-align: center;
         margin-top: 45px;
         font-family: 'Georgia', serif;
-        font-size: 2rem; 
+        font-size: 2rem;
         color: #333;
-      }
+    }
 </style>
 
 <script>
-    loaded = () => {
-        alert("Welcome to Majstorski kutak");
-    }
+    // loaded = () => {
+    // alert("Welcome to Majstorski kutak");
+    // }
 </script>
 
-<div class="container">
+<div class="container marketing">
 
     <div class="row featurette">
         <div class="col-md-7">
-            <h2 class="featurette-heading fw-normal lh-1 custom-heading">About us <span class="text-body-secondary"></span></h2>
-            <p class="lead">With a tradiction over 15 years, we aim to bring beauty and functionality into your home through
+            <h2 class="featurette-heading fw-normal lh-1 custom-heading">About us <span
+                    class="text-body-secondary"></span></h2>
+            <p class="lead">With a tradiction over 15 years, we aim to bring beauty and functionality into your home
+                through
                 handcrafted wooden products.</p>
             <ul>
                 <li>Our mission is to combine tradition and innovation, creating unique products that reflect your
@@ -179,20 +182,39 @@
             </ul>
         </div>
         <div class="col-md-5">
-            <img src="../assets/images/image_22.png" class="img-fluid" alt="Majstorski kutak"> 
+            <img src="../assets/images/image_22.png" class="img-fluid" alt="Majstorski kutak">
         </div>
     </div>
-</div>
 
+    <hr class="featurette-divider">
 
-<div class="contact-form">
-    <h3>Contact Us</h3>
-    <form action="submit_form.php" method="post">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
-        <button type="submit">Send</button>
-    </form>
+    <div class="row featurette">
+        <div class="col-md-8">
+            <div class="contact-form">
+                <h3>Contact Us</h3>
+                <form id="contactForm" onsubmit="saveFormData(event)">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="address-container">
+                <a
+                    href="https://www.google.com/maps/place/Tr%C5%A1i%C4%87/@44.4948686,19.2313092,13z/data=!3m1!4b1!4m6!3m5!1s0x475963a5d4e09b8b:0x58f2d4c6a2ba9cee!8m2!3d44.4999227!4d19.2662304!16zL20vMGRiX3li?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D">
+                    <svg class="bi me-2" width="40" height="32">
+                        <use xlink:href="#maps" />
+                    </svg>
+                </a>
+                <p>Address<br>Dositeja Obradovica, 40<br>Trsic, 15300<br>Loznica<br>Serbia</p>
+            </div>
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
 </div>
 
 <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
@@ -232,16 +254,3 @@
     </svg>
 
 </div>
-
-<body onload="loaded()">
-
-    <div class="address-container">
-        <a
-            href="https://www.google.com/maps/place/Tr%C5%A1i%C4%87/@44.4948686,19.2313092,13z/data=!3m1!4b1!4m6!3m5!1s0x475963a5d4e09b8b:0x58f2d4c6a2ba9cee!8m2!3d44.4999227!4d19.2662304!16zL20vMGRiX3li?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D">
-            <svg class="bi me-2" width="40" height="32">
-                <use xlink:href="#maps" />
-            </svg>
-        </a>
-        <p>Address<br>Dositeja Obradovica, 40<br>Trsic, 15300<br>Loznica<br>Serbia</p>
-    </div>
-</body>

@@ -1,5 +1,5 @@
 messageAboutUs = () => {
-    alert("Welcome to Radionica Vasilic");
+    alert("Welcome to Majstorski kutak!");
 }
 
 setLocalStorage = (key, value) => {
@@ -15,7 +15,7 @@ changeLanguage = (language) => {
     setActiveLanguage(language);
 }
 
-function getLanguage() {
+getLanguage = () => {
     var language = getLocalStorage("language");
     if (language) {
         document.getElementById("language").value = language;
@@ -25,7 +25,7 @@ function getLanguage() {
     }
 }
 
-function setActiveLanguage(language) {
+setActiveLanguage = (language) => {
     const dropdownItems = document.querySelectorAll('.dropdown-item');
     dropdownItems.forEach(item => {
         if (item.getAttribute('onclick').includes(language)) {
@@ -34,6 +34,24 @@ function setActiveLanguage(language) {
             item.classList.remove('active');
         }
     });
+}
+
+saveFormData = (event) => {
+    event.preventDefault();
+
+    const form = event.target;
+    const formData = {
+        name: form.name.value,
+        email: form.email.value,
+        message: form.message.value
+    };
+
+    let forms = getLocalStorage("forms") || [];
+    forms.push(formData);
+    setLocalStorage("forms", forms);
+
+    alert("Form data saved!");
+    form.reset(); // Resetuje formu nakon slanja
 }
 
 document.addEventListener("DOMContentLoaded", function () {
