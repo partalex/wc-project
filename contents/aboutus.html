@@ -131,20 +131,41 @@
     <hr>
 
     <div class="row">
-        <div class="col-12 col-md-8">
-            <form class="row g-3" onsubmit="saveFormData(event)">
-                <div class="col-md-6">
-                    <input placeholder="Your name" type="text" name="name" class="form-control">
+        <div class="col-12">
+            <form class="row g-3">
+                <div class="col-12 col-md-10">
+                    <label for="myAddress" class="form-label">Address</label>
+                    <input type="text" value="Dositeja Obradovica, 40 Trsic" class="form-control" disabled id="myAddress" placeholder="1234 Main St">
+                </div>
+                <div class="col-4 col-md-2">
+                    <label for="inputZip" class="form-label">Zip</label>
+                    <input type="text" value="15300" class="form-control" disabled id="inputZip">
                 </div>
                 <div class="col-md-6">
+                    <label for="inputCity" class="form-label">City</label>
+                    <input type="text" value="Loznica" class="form-control" disabled id="inputCity">
+                </div>
+                <div class="col-md-6">
+                    <label for="inputState" class="form-label">State</label>
+                    <input type="text" value="Serbia" class="form-control" disabled id="inputState">
+                </div>
+            </form>
+        </div>
+        <hr class="mt-3">
+        <div class="col-12">
+            <form class="row g-3" onsubmit="saveFormData(event)">
+                <div class="col-md-5">
+                    <input placeholder="Your name" type="text" name="name" class="form-control">
+                </div>
+                <div class="col-md-5">
                     <input placeholder="Your mail" type="email" name="email" class="form-control">
+                </div>
+                <div class="col-4 col-md-2">
+                    <button type="submit" class="btn btn-dark w-100">Send</button>
                 </div>
                 <div class="col-12">
                     <textarea placeholder="Your message" class="form-control" name="message" id="inputAddress"
                               rows="3"></textarea>
-                </div>
-                <div class="col-12">
-                    <button type="submit" class="btn btn-dark w-100">Send</button>
                 </div>
             </form>
         </div>
@@ -159,18 +180,19 @@
         <!--                </form>-->
         <!--            </div>-->
         <!--        </div>-->
-        <hr class="d-block d-md-none mt-3">
-        <div class="col-md-4">
-            <div class="address-container">
-                <a
-                        href="https://www.google.com/maps/place/Tr%C5%A1i%C4%87/@44.4948686,19.2313092,13z/data=!3m1!4b1!4m6!3m5!1s0x475963a5d4e09b8b:0x58f2d4c6a2ba9cee!8m2!3d44.4999227!4d19.2662304!16zL20vMGRiX3li?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D">
-                    <svg class="bi me-2" width="40" height="32">
-                        <use xlink:href="#maps"/>
-                    </svg>
-                </a>
-                <p>Address<br>Dositeja Obradovica, 40<br>Trsic, 15300<br>Loznica<br>Serbia</p>
-            </div>
-        </div>
+        <!--        <hr class="d-block d-md-none mt-3">-->
+
+        <!--        <div class="col-md-4">-->
+        <!--            <div class="address-container">-->
+        <!--                <a-->
+        <!--                        href="https://www.google.com/maps/place/Tr%C5%A1i%C4%87/@44.4948686,19.2313092,13z/data=!3m1!4b1!4m6!3m5!1s0x475963a5d4e09b8b:0x58f2d4c6a2ba9cee!8m2!3d44.4999227!4d19.2662304!16zL20vMGRiX3li?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D">-->
+        <!--                    <svg class="bi me-2" width="40" height="32">-->
+        <!--                        <use xlink:href="#maps"/>-->
+        <!--                    </svg>-->
+        <!--                </a>-->
+        <!--                <p>Address<br>Dositeja Obradovica, 40<br>Trsic, 15300<br>Loznica<br>Serbia</p>-->
+        <!--            </div>-->
+        <!--        </div>-->
     </div>
 
     <hr>

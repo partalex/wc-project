@@ -63,7 +63,8 @@
         checkCookie = () => {
             let user = readCookie("username");
             if (user != null) {
-                alert("Welcome again " + user);
+                // TODO: Uncomment line below
+                // alert("Welcome again " + user);
             } else {
                 if (confirm("Do you want to save your data?")) {
                     user = prompt("Please enter your name:", "");
