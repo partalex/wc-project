@@ -28,16 +28,6 @@
         height: 32px;
     }
 
-    /* .address-container {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        background-color: rgba(255, 255, 255, 0.8);
-        padding: 0px;
-        border-radius: 0 8px 0 0;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    } */
-
     .contact-form {
         position: relative;
         bottom: 0;
@@ -77,13 +67,6 @@
         background-color: #555;
     }
 
-    /* @media (min-width: 768px) {
-        .address-container {
-            width: 12%;
-            margin-right: 0;
-        }
-    } */
-
     @media (max-width: 768px) {
         .contact-form {
             width: 100%;
@@ -93,48 +76,10 @@
         }
     }
 
-    .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-    }
-
     @media (min-width: 768px) {
         .bd-placeholder-img-lg {
             font-size: 3.5rem;
         }
-    }
-
-    .b-example-divider {
-        width: 100%;
-        height: 3rem;
-        background-color: rgba(0, 0, 0, .1);
-        border: solid rgba(0, 0, 0, .15);
-        border-width: 1px 0;
-        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-    }
-
-    .btn-bd-primary {
-        --bd-violet-bg: #712cf9;
-        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
-
-        --bs-btn-font-weight: 600;
-        --bs-btn-color: var(--bs-white);
-        --bs-btn-bg: var(--bd-violet-bg);
-        --bs-btn-border-color: var(--bd-violet-bg);
-        --bs-btn-hover-color: var(--bs-white);
-        --bs-btn-hover-bg: #6528e0;
-        --bs-btn-hover-border-color: #6528e0;
-        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-        --bs-btn-active-color: var(--bs-btn-hover-color);
-        --bs-btn-active-bg: #5a23c8;
-        --bs-btn-active-border-color: #5a23c8;
-    }
-
-    .bd-mode-toggle {
-        z-index: 1500;
     }
 
     .bd-mode-toggle .dropdown-menu .active .bi {
@@ -154,15 +99,8 @@
     }
 </style>
 
-<script>
-    // loaded = () => {
-    // alert("Welcome to Majstorski kutak");
-    // }
-</script>
-
 <div class="container marketing">
-
-    <div class="row featurette">
+    <div class="row">
         <div class="col-md-7">
             <h2 class="featurette-heading fw-normal lh-1 custom-heading">About us <span
                     class="text-body-secondary"></span></h2>
@@ -190,20 +128,38 @@
         </div>
     </div>
 
-    <hr class="featurette-divider">
+    <hr>
 
-    <div class="row featurette">
-        <div class="col-md-8">
-            <div class="contact-form">
-                <h3>Contact Us</h3>
-                <form id="contactForm" onsubmit="saveFormData(event)">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
-                    <button type="submit">Send</button>
-                </form>
-            </div>
+    <div class="row">
+        <div class="col-12 col-md-8">
+            <form class="row g-3" onsubmit="saveFormData(event)">
+                <div class="col-md-6">
+                    <input placeholder="Your name" type="text" name="name" class="form-control">
+                </div>
+                <div class="col-md-6">
+                    <input placeholder="Your mail" type="email" name="email" class="form-control">
+                </div>
+                <div class="col-12">
+                    <textarea placeholder="Your message" class="form-control" name="message" id="inputAddress"
+                              rows="3"></textarea>
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-dark w-100">Send</button>
+                </div>
+            </form>
         </div>
+        <!--        <div class="col-12 col-md-8">-->
+        <!--            <div class="contact-form">-->
+        <!--                <h3>Contact Us</h3>-->
+        <!--                <form id="contactForm" onsubmit="saveFormData(event)">-->
+        <!--                    <input type="text" name="name" placeholder="Your Name" required>-->
+        <!--                    <input type="email" name="email" placeholder="Your Email" required>-->
+        <!--                    <textarea name="message" placeholder="Your Message" rows="4" required></textarea>-->
+        <!--                    <button type="submit">Send</button>-->
+        <!--                </form>-->
+        <!--            </div>-->
+        <!--        </div>-->
+        <hr class="d-block d-md-none mt-3">
         <div class="col-md-4">
             <div class="address-container">
                 <a
@@ -217,7 +173,7 @@
         </div>
     </div>
 
-    <hr class="featurette-divider">
+    <hr>
 
 </div>
 

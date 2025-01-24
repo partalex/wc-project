@@ -3,6 +3,26 @@
 
 <head>
     <script>
+        function loadTemplate() {
+            fetch('./contents/head.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('head-placeholder').innerHTML = data;
+                });
+
+            fetch('./contents/nav.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('nav-placeholder').innerHTML = data;
+                });
+
+            fetch('./contents/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                });
+        }
+
 
         writeCookie = (name, value, days) => {
             let date = new Date();
@@ -22,10 +42,28 @@
             return null;
         }
 
+        saveFormData = (event) => {
+            event.preventDefault();
+
+            const form = event.target;
+            const formData = {
+                name: form.name.value,
+                email: form.email.value,
+                message: form.message.value
+            };
+
+            let forms = getLocalStorageJson("forms") || [];
+            forms.unshift(formData);
+            setLocalStorageJson("forms", forms);
+
+            alert("Form data saved!");
+            form.reset();
+        }
+
         checkCookie = () => {
             let user = readCookie("username");
             if (user != null) {
-                // alert("Welcome again " + user);
+                alert("Welcome again " + user);
             } else {
                 if (confirm("Do you want to save your data?")) {
                     user = prompt("Please enter your name:", "");
@@ -36,32 +74,12 @@
             }
         }
 
-        function loadTemplate() {
-            fetch('./contents/head.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('head-content').innerHTML = data;
-                });
-
-            fetch('./contents/nav.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('nav-content').innerHTML = data;
-                });
-
-            // fetch('./contents/footer.html')
-            //     .then(response => response.text())
-            //     .then(data => {
-            //         document.getElementById('footer-content').innerHTML = data;
-            //     });
-        }
-
         document.addEventListener("DOMContentLoaded", function () {
             loadTemplate();
             fetch('./contents/aboutus.html')
                 .then(response => response.text())
                 .then(data => {
-                    document.getElementById('content-content').innerHTML = data;
+                    document.getElementById('content-placeholder').innerHTML = data;
                     checkCookie();
                 });
         })
@@ -69,8 +87,7 @@
     <title>About us</title>
 </head>
 
-<!-- <body onload="messageAboutUs()"> -->
-<body data-content-file="./contents/aboutus.html">
+<body>
 <div id="head-placeholder"></div>
 <div id="nav-placeholder"></div>
 <div id="content-placeholder"></div>
@@ -78,7 +95,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-<script src="./loadTemplate.js"></script>
 <script src="./main.js"></script>
 </body>
 

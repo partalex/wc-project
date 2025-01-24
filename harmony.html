@@ -2,36 +2,6 @@
 <html lang="en">
 
 <head>
-    <script>
-        function loadTemplate() {
-            fetch('./contents/head.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('head-content').innerHTML = data;
-                });
-
-            fetch('./contents/nav.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('nav-content').innerHTML = data;
-                });
-
-            fetch('./contents/footer.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('footer-content').innerHTML = data;
-                });
-        }
-
-        document.addEventListener("DOMContentLoaded", function () {
-            loadTemplate();
-            fetch('./contents/harmony.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('content-content').innerHTML = data;
-                });
-        });
-    </script>
     <title>Harmony</title>
 </head>
 
