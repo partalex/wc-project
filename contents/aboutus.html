@@ -133,9 +133,10 @@
     <div class="row">
         <div class="col-12">
             <form class="row g-3">
-                <div class="col-12 col-md-10">
+                <div class="col-8 col-md-10">
                     <label for="myAddress" class="form-label">Address</label>
-                    <input type="text" value="Dositeja Obradovica, 40 Trsic" class="form-control" disabled id="myAddress" placeholder="1234 Main St">
+                    <input type="text" value="Dositeja Obradovica, 40 Trsic" class="form-control" disabled
+                           id="myAddress" placeholder="1234 Main St">
                 </div>
                 <div class="col-4 col-md-2">
                     <label for="inputZip" class="form-label">Zip</label>
@@ -160,12 +161,16 @@
                 <div class="col-md-5">
                     <input placeholder="Your mail" type="email" name="email" class="form-control">
                 </div>
-                <div class="col-4 col-md-2">
+                <!-- make visible on small screens -->
+                <div class="d-none d-md-block col-md-2">
                     <button type="submit" class="btn btn-dark w-100">Send</button>
                 </div>
                 <div class="col-12">
                     <textarea placeholder="Your message" class="form-control" name="message" id="inputAddress"
                               rows="3"></textarea>
+                </div>
+                <div class="col-12 d-block d-md-none">
+                    <button type="submit" class="btn btn-dark w-100">Send</button>
                 </div>
             </form>
         </div>
