@@ -19,20 +19,32 @@ getLocalStorage = (key) => {
     return localStorage.getItem(key);
 }
 
-changeLanguage = (language) => {
+const changeLanguage = (language) => {
     setLocalStorage("language", language);
     // setActiveLanguage(language);
+    loadLanguage();
 }
-
 const defaultLanguage = "en";
 
-loadLanguage = () => {
+const loadLanguage = () => {
     let language = getLocalStorage("language");
-    if (!language)
-        setLocalStorage("language", defaultLanguage);
-}
-
-// setActiveLanguage = (language) => {
+    if (!language) {
+        language = defaultLanguage;
+        setLocalStorage("language", language);
+    }
+    const currentPath = window.location.pathname;
+    let newPath;
+    if (language === "sr") {
+        if (!currentPath.includes("_sr.html")) {
+            newPath = currentPath.replace(".html", "_sr.html");
+        }
+    } else {
+        newPath = currentPath.replace("_sr.html", ".html");
+    }
+    if (newPath && currentPath !== newPath) {
+        window.location.pathname = newPath;
+    }
+}// setActiveLanguage = (language) => {
 //     const dropdownItems = document.querySelectorAll('.dropdown-item');
 //     dropdownItems.forEach(item => {
 //         if (item.getAttribute('onclick').includes(language)) {
